@@ -13,7 +13,7 @@
 //     }
 // })
 // .catch((error)=>console.log(error+"can not found data"));
-fetch("./student_data.json")
+fetch("fetchApi/student_data.json")
 .then((response) => response.json())
   .then((data) => {
     console.log(data);
