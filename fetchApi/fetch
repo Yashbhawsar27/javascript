@@ -1,0 +1,10 @@
+fetch(file/url,{
+    method :"post", put delete  get
+    body: data , form data / json data / Text
+
+    header :{
+        'Content-Type':'application/json',      'application/x-www-form-urlencoded'// form ka data
+
+    },
+
+})

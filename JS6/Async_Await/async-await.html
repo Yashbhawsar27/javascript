@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //  async function test () // ek promise return kre ga
+
+//  {
+//    console.log("2: message");
+//    const response = await fetch("../FetchApi/student_data.json");
+//     console.log("3: message");//ye line waiting stage me chali jaaye gi jab tak second time call ni hoga
+//     const data = await response.json ();
+//      return data;
+//  }
+
+//  console.log("1: message");
+//  let a= test();
+//  console.log("4: message");
+//  console.log(a);
+
+async function test ()
+{
+    console.log("hello");
+ try{
+
+ 
+  const response = await fetch("/FetchApi/student_data.json");
+  console.log(response);
+  const data = await response.json();
+  console.log("done")
+    return data;
+    // return ( await fetch("/FetchApi/student_data.json")).json();
+    // uper me kuch likhna
+     // ni pde ga direct return kr de ge
+}
+    catch(error)
+    {
+        console.log(error);
+    }
+}
+
+test().then((res)=>{
+
+   console.log(res);
+})
+// .catch((error)=>{
+//    console.log(error+"error founded");
+// });                                   try catch me ye wala catch bhi ho gaya
+
+
+
+    </script>
+</body>
+</html>
